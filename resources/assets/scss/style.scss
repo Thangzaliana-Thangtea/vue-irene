@@ -1,0 +1,71 @@
+/**
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @version v1.0.0-alpha.6
+ * @link http://coreui.io
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @license MIT
+ */
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap source files
+@import "bootstrap/bootstrap";
+
+// If you want you can import bootstrap scss files directly from node_modules or bower_components.
+// To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
+
+// Import Bootstrap source files from node_modules
+// @import "node_modules/bootstrap/scss/bootstrap";
+
+// Import Bootstrap source files from bower_components
+// @import "bower_components/bootstrap/scss/bootstrap";
+//
+// Import vendors styles
+@import "vendors/vendors";
+
+// Override core variables
+@import "core-variables";
+
+// Import core styles
+@import "core/core";
+
+// Custom styles
+@import "custom";
+
+
+.VueTables__table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: middle;
+    //border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+
+  .table {
+    background-color: $body-bg;
+  }
+}
+.VueTables__search-field{
+  display: flex;
+}
+.VueTables__limit-field{
+  display: flex;
+}
+.card{
+  box-shadow: 5px 5px 5px 5px lightgray;
+}
